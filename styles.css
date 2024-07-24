@@ -1,0 +1,232 @@
+:root {
+    --night: #0C1713;
+    --blue: #072AC8;
+    --white: #F7F9F9;
+    --gray: #7C7C7C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--night);
+    color: var(--white);
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Header styles */
+.top_section {
+    width: 100%;
+    height: 90%;
+    background-image: linear-gradient(38deg, rgba(29, 29, 29, 0.9), rgba(12, 23, 19, 0.9)), url('./images/computer-background.jpg');
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.top_section .top_section_message {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top_section_message h3 {
+    font-size: 3.5rem;
+    letter-spacing: .875rem;
+    width: 700px;
+    margin: 0 0 20px 30%;
+}
+
+.top_section_message button {
+    width: 300px;
+    padding: 20px 10px;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.top_section_message button:hover {
+    animation: button-hover linear;
+    animation-duration: 1s;
+    background-image:linear-gradient(38deg, rgba(12, 23, 19, 0.4), rgba(7, 42, 200, 0.4));
+    box-shadow: 0 4px 4px rgba(7, 42, 200, 0.4);
+}
+
+/* Main Navigation */
+
+.main-nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(12, 23, 19, 0.3);
+    box-shadow: 0 4px 4px rgba(7, 42, 200, 0.2); 
+}
+
+.main-nav .logo h4 {
+    margin-left: 20px;
+    font-size: 3rem;
+}
+
+.main-nav .nav-list {
+    list-style: none;
+    width: 500px;
+    margin: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.main-nav .nav-list .nav-link a {
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.main-nav .nav-list .nav-link a:hover {
+    color: var(--blue);
+}
+
+/* Main styles */
+
+.main-content {
+    width: 100vw;
+    height: 100vh;
+    padding: 10% 20px 0 20px;
+    margin-top: 8%;
+}
+
+.main-content .why-me {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-content .why-me .why-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-content .why-me .why-list .why-items {
+    font-size: 1.5rem;
+     background-color: rgb(124, 124, 124, 0.1);
+     border: none;
+     border-radius: 5px;
+     width: 400px;
+     height: 300px;
+     padding: 20px;
+}
+
+.main-content .why-me .why-list h5 {
+    font-size: 2.5rem;
+    margin: 10px 0 10px 0;
+    padding: 0 0 10px 10px;
+    border-bottom: 2px solid var(--blue);
+}
+
+/* About Styling */
+
+.about {
+    width: 100vw;
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.about .pic {
+    width: 30%;
+    background-color: var(--night);
+    margin: 50px;
+    box-shadow: 0 0 10px 10px rgba(7, 42, 200, 0.3);
+}
+
+.about .pic img {
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+.about .about-msg {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 10px 100px rgba(7, 42, 200, 0.3);
+    margin: -10px 0 0 -10px;
+}
+
+.about .about-msg h5 {
+    color: var(--blue);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.about .about-msg h4 {
+    font-size: 3.2rem;
+    margin: 10px 0;
+}
+
+.about .about-msg p {
+    margin: 10px;
+}
+
+.about button {
+    width: 50%;
+    margin: 10px 10%;
+    padding: 10px 5px;
+    font-size: 3.2rem;
+    border: none;
+    border-radius: 4px;
+    background-image:linear-gradient(320deg, rgba(12, 23, 19, 0.4), rgba(7, 42, 200, 0.4));
+    color: var(--white);
+    cursor: pointer;
+}
+
+.about button:hover {
+    animation: button-hover linear;
+    animation-duration: 0.3s;
+}
+
+/* Keyframe animations */
+
+@keyframes button-hover {
+    to {
+        transform: translateY(-2px);
+    }
+}
